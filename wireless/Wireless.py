@@ -11,6 +11,8 @@ def cmd(cmd):
         stdout=subprocess.PIPE, stderr=subprocess.STDOUT
     ).stdout.read().decode()
 
+def cmp(a, b):
+    return (a > b) - (a < b)
 
 # abstracts away wireless connection
 class Wireless:
